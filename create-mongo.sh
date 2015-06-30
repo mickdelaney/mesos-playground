@@ -1,0 +1,1 @@
+curl -X POST -H "Content-Type: application/json" http://192.168.59.103:8080/v2/apps -d@mongo.json

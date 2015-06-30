@@ -1,0 +1,28 @@
+{
+  "id":"mongo",
+  "mem": 64,
+  "cpus":0.1,
+  "env":{
+    "MONGODB_PASS":"elevate2014"
+  },
+  "container":{
+    "type":"DOCKER",
+    "docker":{
+      "image":"tutum/mongodb",
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 27017, "hostPort": 0, "servicePort": 9000, "protocol": "tcp" }
+      ]
+    },
+    "volumes":[{
+      "containerPath": "/data/db",
+      "hostPath": "/home/docker/mongodata",
+      "mode": "RW"
+    }]
+
+  }
+
+
+
+}
+
